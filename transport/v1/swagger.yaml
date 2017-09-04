@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Users
+  license:
+    name: MIT
+paths:
+  /user:
+    get:
+      summary: Gets a User from the database
+      operationId: getUser
+      tags:
+        - User
+      parameters:
+        - name: id
+          in: query
+          required: true
+          description: Id of the user
+          type: number
+      responses:
+        200:
+          schema:
+            $ref: '#/definitions/User'
+        404:
+          description: User can't be found
+definitions:
+  User:
+    properties:
+      id:
+        type: number
+      name:
+        type: string
