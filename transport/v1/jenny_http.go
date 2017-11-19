@@ -22,7 +22,7 @@ import (
 const ct = "Content-Type"
 
 func encodeGetUserResponse(ctx context.Context, w http.ResponseWriter, response interface{}) error {
-	produces := []string{}
+	produces := []string{"application/json"}
 
 	resp := response.(_getUserResponse)
 

@@ -4,6 +4,10 @@ info:
   title: Users
   license:
     name: MIT
+produces:
+  - application/json
+consumes:
+  - application/json
 paths:
   /user:
     get:
